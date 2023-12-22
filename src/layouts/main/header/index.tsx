@@ -1,10 +1,13 @@
 import React from 'react'
+import HeaderComponent from '@/components/header'
 
 type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <header>Header</header>
+    <header>
+      <HeaderComponent />
+    </header>
   )
 }
 
