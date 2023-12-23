@@ -1,14 +1,14 @@
 import React from 'react'
 import Logo from '@/components/header/logo'
-import NavBar from '@/components/header/navbar'
+import NavBar from '@/components/header/nav-bar'
 import styles from './styles.module.css'
 
 type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <header className={`${styles.header} h-16 bg-red-500`}>
-      <div className="container mx-auto flex items-center justify-between">
+    <header className={`Header ${styles.header}`}>
+      <div className="container mx-auto flex items-center justify-between h-16">
         <Logo />
 
         <NavBar />
