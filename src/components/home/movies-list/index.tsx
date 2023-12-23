@@ -2,15 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './styles.module.css'
+import { IMovie } from '@/types'
 
 type Props = {
-  movies: [
-    {
-      id: number
-      poster_path: string
-      title: string
-    }
-  ]
+  movies: IMovie[]
   title: string
 }
 

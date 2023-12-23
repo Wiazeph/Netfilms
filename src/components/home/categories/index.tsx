@@ -1,14 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './styles.module.css'
+import { ICategory } from '@/types'
 
 type Props = {
-  categories: [
-    {
-      id: number
-      name: string
-    }
-  ]
+  categories: ICategory[]
 }
 
 const Categories = (props: Props) => {

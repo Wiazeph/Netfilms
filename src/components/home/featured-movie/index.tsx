@@ -3,14 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaPlus } from 'react-icons/fa'
 import styles from './styles.module.css'
+import { IMovie } from '@/types'
 
 type Props = {
-  movie: {
-    id: number
-    poster_path: string
-    title: string
-    overview: string
-  }
+  movie: IMovie
   isCompact: boolean
 }
 
