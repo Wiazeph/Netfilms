@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaPlus } from 'react-icons/fa'
+import styles from './styles.module.css'
 
 type Props = {
   movie: {
@@ -10,37 +11,53 @@ type Props = {
     title: string
     overview: string
   }
-  isCompact: true
+  isCompact: boolean
 }
 
 const FeaturedMovie = (props: Props) => {
   return (
-    <div className="movieWrapper">
-      <h1 className="movieTitle">{props.movie.title}</h1>
+    <section className="FeaturedMovie">
+      <div className="movieWrapper flex flex-col gap-6 my-14">
+        <h1 className="movieTitle text-7xl uppercase tracking-tighter font-black max-w-[25ch]">
+          {props.movie.title}
+        </h1>
 
-      <p className={`overview ${props.isCompact ? 'shortOverview' : ''}`}>
-        {props.movie.overview}
-      </p>
+        <p
+          className={`text-2xl max-w-[50ch] ${
+            props.isCompact ? 'line-clamp-2' : ''
+          }`}
+        >
+          {props.movie.overview}
+        </p>
 
-      <div className="actionButtons">
-        <Link href={`/movie/${props.movie.id}`} className="playButton"></Link>
+        <div className="actionButtons flex gap-3">
+          <Link
+            href={`/movie/${props.movie.id}`}
+            className="playButton flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold"
+          >
+            Play
+          </Link>
 
-        <button className="addButton">
-          <FaPlus />
-        </button>
+          <button className="addButton flex items-center justify-center border-2 border-[#eee] rounded-full w-16 h-16 text-[#eee]">
+            <FaPlus />
+          </button>
+        </div>
+
+        <div className="moviePoster">
+          <div
+            className={`moviePosterOverlay absolute top-0 left-0 right-0 bottom-0 -z-10 ${styles.moviePosterOverlay}`}
+          ></div>
+
+          <Image
+            unoptimized
+            src={`https://image.tmdb.org/t/p/original${props.movie.poster_path}`}
+            alt={props.movie.title}
+            fill
+            className="moviePosterImg h-auto -z-20 max-h-screen object-cover"
+          />
+        </div>
       </div>
-
-      <div className="moviePoster">
-        <div className="moviePosterOverlay"></div>
-
-        <Image
-          unoptimized
-          src={`https://image.tmdb.org/t/p/original${props.movie.poster_path}`}
-          alt={props.movie.title}
-          fill
-        />
-      </div>
-    </div>
+    </section>
   )
 }
 
