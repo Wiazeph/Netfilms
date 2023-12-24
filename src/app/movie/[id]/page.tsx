@@ -14,7 +14,7 @@ type Props = {
 
 const Movie = (props: Props) => {
   const movieDetail = Movies.results.find(
-    (movie) => movie.id === props.params.id
+    (movie) => movie.id == props.params.id
   )
 
   if (!movieDetail) {

@@ -45,9 +45,9 @@ const FeaturedMovie = (props: Props) => {
           ></div>
 
           <Image
-            unoptimized
             src={`https://image.tmdb.org/t/p/original${props.movie.poster_path}`}
             alt={props.movie.title}
+            unoptimized
             fill
             className="moviePosterImg h-auto -z-20 max-h-screen object-cover"
           />
