@@ -9,7 +9,7 @@ type Props = {}
 
 const Home = (props: Props) => {
   return (
-    <div className="Home container mx-auto">
+    <div className="Home flex flex-col gap-y-14">
       <FeaturedMovie movie={Movies.results[0]} isCompact={true} />
       <Categories categories={Genres.genres.slice(0, 5)} />
 

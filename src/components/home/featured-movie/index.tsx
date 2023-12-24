@@ -13,7 +13,7 @@ type Props = {
 const FeaturedMovie = (props: Props) => {
   return (
     <section className="Featured-Movie">
-      <div className="movieWrapper flex flex-col gap-6 my-14">
+      <div className="movieWrapper flex flex-col gap-6">
         <h1 className="movieTitle text-7xl uppercase tracking-tighter font-black max-w-[25ch]">
           {props.movie.title}
         </h1>

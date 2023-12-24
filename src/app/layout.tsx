@@ -18,11 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`flex flex-col gap-y-14 ${inter.className}`}>
         <Header />
-        <main className='Main'>{children}</main>
+        <main className="Main">
+          <div className="container mx-auto">{children}</div>
+        </main>
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }

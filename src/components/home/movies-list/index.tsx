@@ -11,7 +11,7 @@ type Props = {
 
 const Movies = (props: Props) => {
   return (
-    <section className="Movies mt-9">
+    <section className="Movies-List">
       <h3 className="mb-3 uppercase text-2xl tracking-tighter">
         {props.title}
       </h3>
