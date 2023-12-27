@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaPlus } from 'react-icons/fa'
 import { IMovie } from '@/types'
+import Button from '@/components/ui/button'
 
 type Props = {
   movie: IMovie
@@ -26,16 +27,17 @@ const FeaturedMovie = (props: Props) => {
         </p>
 
         <div className="Action-Buttons flex gap-3">
-          <Link
-            href={`/movie/${props.movie.id}`}
-            className="Play-Button flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold select-none"
+          <Button
+            classes={'Play-Button bg-[#eee] text-[#222] w-76 text-xl font-bold'}
           >
-            Play
-          </Link>
+            <Link href={`/movie/${props.movie.id}`}>Play</Link>
+          </Button>
 
-          <button className="Add-Button flex items-center justify-center border-2 border-[#eee] rounded-full w-16 h-16 text-[#eee]">
+          <Button
+            classes={'Add-Button w-16 border-2 border-[#eee] text-[#eee]'}
+          >
             <FaPlus />
-          </button>
+          </Button>
         </div>
 
         <div className="Movie-Poster select-none">
