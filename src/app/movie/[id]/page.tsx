@@ -1,7 +1,7 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
-import FeaturedMovie from '@/components/home/featured-movie'
 import Movies from '@/mocks/movies.json'
+import MovieComponent from '@/components/movie'
 
 type Props = {
   params: {
@@ -17,6 +17,8 @@ const Movie = (props: Props) => {
     (movie) => movie.id == props.params.id
   )
 
+  console.log('movieDetail', movieDetail)
+
   if (!movieDetail) {
     notFound()
   }
@@ -25,11 +27,7 @@ const Movie = (props: Props) => {
     throw new Error('An error has occurred. Sorry for that!')
   }
 
-  return (
-    <section className="Movie container">
-      <FeaturedMovie movie={movieDetail} isCompact={false} />
-    </section>
-  )
+  return <MovieComponent movieDetail={movieDetail} />
 }
 
 export default Movie
