@@ -28,13 +28,17 @@ const FeaturedMovie = (props: Props) => {
 
         <div className="Action-Buttons flex gap-3">
           <Button
-            classes={'Play-Button bg-[#eee] text-[#222] w-76 text-xl font-bold'}
+            classes={
+              'Play-Button w-76 text-xl font-bold bg-zinc-100 text-zinc-800'
+            }
           >
             <Link href={`/movie/${props.movie.id}`}>Play</Link>
           </Button>
 
           <Button
-            classes={'Add-Button w-16 border-2 border-[#eee] text-[#eee]'}
+            classes={
+              'Add-Button w-16 border-2 border-zinc-100 text-zinc-100 hover:border-zinc-800'
+            }
           >
             <FaPlus />
           </Button>

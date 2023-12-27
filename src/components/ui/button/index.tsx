@@ -10,7 +10,7 @@ const Button = (props: Props) => {
     <button
       className={`${
         props.classes ? props.classes : ''
-      } flex items-center justify-center rounded-full h-16 select-none`}
+      } flex items-center justify-center rounded-full h-16 select-none transition-colors duration-300 hover:bg-zinc-800 hover:text-zinc-100`}
     >
       {props.children}
     </button>
