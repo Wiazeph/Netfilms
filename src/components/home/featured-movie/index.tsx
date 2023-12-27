@@ -32,7 +32,12 @@ const FeaturedMovie = (props: Props) => {
               'Play-Button w-76 text-xl font-bold bg-zinc-100 text-zinc-800'
             }
           >
-            <Link href={`/movie/${props.movie.id}`}>Play</Link>
+            <Link
+              href={`/movie/${props.movie.id}`}
+              className="w-full h-full flex items-center justify-center"
+            >
+              Play
+            </Link>
           </Button>
 
           <Button
