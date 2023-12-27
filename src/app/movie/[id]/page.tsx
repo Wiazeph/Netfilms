@@ -26,7 +26,7 @@ const Movie = (props: Props) => {
   }
 
   return (
-    <section className="Movie container mx-auto">
+    <section className="Movie container">
       <FeaturedMovie movie={movieDetail} isCompact={false} />
     </section>
   )

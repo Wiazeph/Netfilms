@@ -6,7 +6,7 @@ type Props = {}
 const Footer = (props: Props) => {
   return (
     <footer className="Footer mt-auto pb-4">
-      <div className="container mx-auto flex items-center justify-center gap-1.5">
+      <div className="container flex items-center justify-center gap-1.5">
         <span>Made with by</span>
 
         <Link

@@ -8,7 +8,7 @@ type Props = {}
 const Header = (props: Props) => {
   return (
     <header className={`Header ${styles.header}`}>
-      <div className="container mx-auto flex items-center justify-between h-16">
+      <div className="container flex items-center justify-between h-16">
         <Logo />
 
         <NavBar />
