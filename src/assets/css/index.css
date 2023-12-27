@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white flex flex-col justify-between gap-y-14 min-h-screen;
+    @apply bg-black text-white flex flex-col justify-between gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-y-14 min-h-screen;
   }
 }
 
