@@ -18,7 +18,7 @@ const Movies = (props: Props) => {
       <div className="Movies">
         {props.movies.map((movie) => (
           <div
-            className="Movie relative transition-transform duration-300 ease-in-out overflow-hidden rounded-lg hover:scale-110"
+            className="Movie relative transition-transform duration-300 ease-in-out overflow-hidden rounded-lg hover:scale-110 shadow-md"
             key={movie.id}
           >
             <Link href={`/movie/${movie.id}`}>

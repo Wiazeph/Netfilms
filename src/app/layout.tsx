@@ -18,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`flex flex-col justify-between gap-y-14 ${inter.className}`}
-      >
+      <body className={inter.className}>
         <header className="Header">
           <HeaderLayout />
         </header>

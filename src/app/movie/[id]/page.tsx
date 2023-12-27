@@ -17,8 +17,6 @@ const Movie = (props: Props) => {
     (movie) => movie.id == props.params.id
   )
 
-  console.log('movieDetail', movieDetail)
-
   if (!movieDetail) {
     notFound()
   }

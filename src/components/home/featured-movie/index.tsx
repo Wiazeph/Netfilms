@@ -12,13 +12,13 @@ type Props = {
 const FeaturedMovie = (props: Props) => {
   return (
     <section className="Featured-Movie">
-      <div className="Movie-Wrapper flex flex-col gap-6">
-        <h1 className="Movie-Title text-7xl uppercase tracking-tighter font-black max-w-[25ch]">
+      <div className="Movie-Wrapper flex flex-col gap-6 sm:gap-7 md:gap-8">
+        <h1 className="Movie-Title text-4xl md:text-5xl xl:text-6xl uppercase tracking-tighter font-black max-w-[25ch]">
           {props.movie.title}
         </h1>
 
         <p
-          className={`text-2xl max-w-[50ch] ${
+          className={`text-lg md:text-xl xl:text-2xl max-w-[50ch] ${
             props.isCompact ? 'line-clamp-2' : ''
           }`}
         >
@@ -28,7 +28,7 @@ const FeaturedMovie = (props: Props) => {
         <div className="Action-Buttons flex gap-3">
           <Link
             href={`/movie/${props.movie.id}`}
-            className="Play-Button flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold"
+            className="Play-Button flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold select-none"
           >
             Play
           </Link>
@@ -38,7 +38,7 @@ const FeaturedMovie = (props: Props) => {
           </button>
         </div>
 
-        <div className="Movie-Poster">
+        <div className="Movie-Poster select-none">
           <div className="Movie-Poster-Overlay absolute top-0 left-0 right-0 bottom-0 -z-10"></div>
 
           <Image

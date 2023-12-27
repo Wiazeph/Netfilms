@@ -14,7 +14,7 @@ const Categories = (props: Props) => {
           <Link
             key={category.id}
             href={`/${category.id}`}
-            className="Category w-full h-full flex items-center justify-center bg-black/75 font-bold border border-[#333] rounded-md"
+            className="Category w-full h-full flex items-center justify-center bg-black/75 font-bold border border-[#333] rounded-md shadow-xl"
           >
             <div className="name">{category.name}</div>
           </Link>
