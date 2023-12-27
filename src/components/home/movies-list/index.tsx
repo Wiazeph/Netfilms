@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './styles.module.css'
 import { IMovie } from '@/types'
 
 type Props = {
@@ -16,10 +15,10 @@ const Movies = (props: Props) => {
         {props.title}
       </h3>
 
-      <div className={styles.movies}>
+      <div className="Movies">
         {props.movies.map((movie) => (
           <div
-            className={`relative transition-transform duration-300 ease-in-out overflow-hidden rounded-lg hover:scale-110 ${styles.movie}`}
+            className="Movie relative transition-transform duration-300 ease-in-out overflow-hidden rounded-lg hover:scale-110"
             key={movie.id}
           >
             <Link href={`/movie/${movie.id}`}>

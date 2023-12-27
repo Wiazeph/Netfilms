@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaPlus } from 'react-icons/fa'
-import styles from './styles.module.css'
 import { IMovie } from '@/types'
 
 type Props = {
@@ -13,8 +12,8 @@ type Props = {
 const FeaturedMovie = (props: Props) => {
   return (
     <section className="Featured-Movie">
-      <div className="movieWrapper flex flex-col gap-6">
-        <h1 className="movieTitle text-7xl uppercase tracking-tighter font-black max-w-[25ch]">
+      <div className="Movie-Wrapper flex flex-col gap-6">
+        <h1 className="Movie-Title text-7xl uppercase tracking-tighter font-black max-w-[25ch]">
           {props.movie.title}
         </h1>
 
@@ -26,30 +25,28 @@ const FeaturedMovie = (props: Props) => {
           {props.movie.overview}
         </p>
 
-        <div className="actionButtons flex gap-3">
+        <div className="Action-Buttons flex gap-3">
           <Link
             href={`/movie/${props.movie.id}`}
-            className="playButton flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold"
+            className="Play-Button flex items-center justify-center bg-[#eee] text-[#222] w-76 rounded-full text-xl font-bold"
           >
             Play
           </Link>
 
-          <button className="addButton flex items-center justify-center border-2 border-[#eee] rounded-full w-16 h-16 text-[#eee]">
+          <button className="Add-Button flex items-center justify-center border-2 border-[#eee] rounded-full w-16 h-16 text-[#eee]">
             <FaPlus />
           </button>
         </div>
 
-        <div className="moviePoster">
-          <div
-            className={`moviePosterOverlay absolute top-0 left-0 right-0 bottom-0 -z-10 ${styles.moviePosterOverlay}`}
-          ></div>
+        <div className="Movie-Poster">
+          <div className="Movie-Poster-Overlay absolute top-0 left-0 right-0 bottom-0 -z-10"></div>
 
           <Image
             src={`https://image.tmdb.org/t/p/original${props.movie.poster_path}`}
             alt={props.movie.title}
             unoptimized
             fill
-            className="moviePosterImg h-auto -z-20 max-h-screen object-cover"
+            className="h-auto! max-h-screen -z-20 object-cover"
           />
         </div>
       </div>

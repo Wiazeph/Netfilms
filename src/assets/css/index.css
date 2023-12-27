@@ -3,12 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body {
-    @apply h-full;
-  }
-
   body {
     @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .Header {
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .Movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 320px;
+    gap: 24px;
+  }
+
+  .Movie-Poster-Overlay {
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.9) 30%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .Category {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .Movie {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
   }
 }

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/assets/css/index.css'
-import Header from '@/layouts/main/header'
-import Footer from '@/layouts/main/footer'
+import HeaderLayout from '@/layouts/main/header'
+import FooterLayout from '@/layouts/main/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,14 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`flex flex-col gap-y-14 ${inter.className}`}>
-        <Header />
-        
-        <main className="Main">
-          <div className="container">{children}</div>
-        </main>
+      <body
+        className={`flex flex-col justify-between gap-y-14 ${inter.className}`}
+      >
+        <header className="Header">
+          <HeaderLayout />
+        </header>
 
-        <Footer />
+        <main className="Main">{children}</main>
+
+        <footer className="Footer">
+          <FooterLayout />
+        </footer>
       </body>
     </html>
   )

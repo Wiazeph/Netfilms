@@ -4,7 +4,7 @@ import { FaPlayCircle } from 'react-icons/fa'
 
 type Props = {}
 
-const Logo = (props: Props) => {
+const LogoComponent = (props: Props) => {
   return (
     <div className="Logo">
       <Link
@@ -17,4 +17,4 @@ const Logo = (props: Props) => {
   )
 }
 
-export default Logo
+export default LogoComponent

@@ -1,20 +1,17 @@
 import React from 'react'
-import Logo from '@/components/header/logo'
-import NavBar from '@/components/header/nav-bar'
-import styles from './styles.module.css'
+import LogoComponent from '@/components/header/logo'
+import NavBarComponent from '@/components/header/nav-bar'
 
 type Props = {}
 
-const Header = (props: Props) => {
+const HeaderLayout = (props: Props) => {
   return (
-    <header className={`Header ${styles.header}`}>
-      <div className="container flex items-center justify-between h-16">
-        <Logo />
+    <div className="container flex items-center justify-between h-16">
+      <LogoComponent />
 
-        <NavBar />
-      </div>
-    </header>
+      <NavBarComponent />
+    </div>
   )
 }
 
-export default Header
+export default HeaderLayout

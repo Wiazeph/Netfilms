@@ -1,24 +1,18 @@
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
 
 type Props = {}
 
-const Footer = (props: Props) => {
+const FooterLayout = (props: Props) => {
   return (
-    <footer className="Footer mt-auto pb-4">
-      <div className="container flex items-center justify-center gap-1.5">
-        <span>Made with by</span>
+    <div className="container pb-4 flex items-center justify-center gap-1.5">
+      <span>Made with by</span>
 
-        <Link
-          href="https://emreerden.dev/"
-          target="_blank"
-          className="underline"
-        >
-          Emre Erden
-        </Link>
-      </div>
-    </footer>
+      <Link href="https://emreerden.dev/" target="_blank" className="underline">
+        Emre Erden
+      </Link>
+    </div>
   )
 }
 
-export default Footer
+export default FooterLayout

@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from './styles.module.css'
 import { ICategory } from '@/types'
 
 type Props = {
@@ -15,7 +14,7 @@ const Categories = (props: Props) => {
           <Link
             key={category.id}
             href={`/${category.id}`}
-            className={`w-full h-full flex items-center justify-center bg-black/75 font-bold border border-[#333] rounded-md ${styles.category}`}
+            className="Category w-full h-full flex items-center justify-center bg-black/75 font-bold border border-[#333] rounded-md"
           >
             <div className="name">{category.name}</div>
           </Link>

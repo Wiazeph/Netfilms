@@ -3,7 +3,7 @@ import React from 'react'
 
 type Props = {}
 
-const NavBar = (props: Props) => {
+const NavBarComponent = (props: Props) => {
   return (
     <nav className="Nav-Bar flex gap-x-6 sm:gap-x-8 md:gap-x-10 lg:gap-x-12 xl:gap-x-14">
       <Link href="/">Movies</Link>
@@ -13,4 +13,4 @@ const NavBar = (props: Props) => {
   )
 }
 
-export default NavBar
+export default NavBarComponent
