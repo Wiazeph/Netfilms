@@ -14,7 +14,7 @@ const Categories = (props: Props) => {
           <Link
             key={category.id}
             href={`/${category.id}`}
-            className="Category px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-12 sm:h-14 md:h-16 lg:h-18 flex items-center justify-center bg-black/70 font-bold border border-[#333] rounded-md shadow-xl hover:bg-black hover:scale-105 transition-all"
+            className="Category px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-14 flex items-center justify-center bg-black/70 font-bold border border-[#333] rounded-md shadow-xl hover:bg-black hover:scale-105 transition-all"
           >
             <div className={`${category.name} w-max`}>{category.name}</div>
           </Link>
