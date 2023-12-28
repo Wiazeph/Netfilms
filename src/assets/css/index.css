@@ -35,4 +35,14 @@
       rgba(255, 255, 255, 0) 100%
     );
   }
+
+  /* Hide ScrollBar */
+  .scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* Hide ScrollBar */
 }

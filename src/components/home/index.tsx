@@ -11,13 +11,13 @@ const HomeComponent = (props: Props) => {
   return (
     <div className="Home-Component container flex flex-col gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-y-14">
       <FeaturedMovie movie={Movies.results[0]} isCompact={true} />
-      <Categories categories={Genres.genres.slice(0, 5)} />
+      <Categories categories={Genres.genres} />
 
-      <MoviesList title="Popular Films" movies={Movies.results.slice(0, 10)} />
+      <MoviesList title="Popular Films" movies={Movies.results.slice(0, 12)} />
 
       <MoviesList
         title="Your Favorites"
-        movies={Movies.results.slice(10, 18)}
+        movies={Movies.results.slice(12, 20)}
       />
     </div>
   )
