@@ -1,38 +1,11 @@
 import React from 'react'
 import HomeComponent from '@/components/home'
+import { getCategory, getGenres, getTopRated, getPopular } from '@/services'
 
 type Props = {
   params: {
     category: string[]
   }
-}
-
-const getCategory = async (genreID: String) => {
-  const res = await fetch(
-    `${process.env.BASE_URL}/discover/movie?api_key=${process.env.API_KEY}&page=1&with_genres=${genreID}`
-  )
-  return res.json()
-}
-
-const getGenres = async () => {
-  const res = await fetch(
-    `${process.env.BASE_URL}/genre/movie/list?api_key=${process.env.API_KEY}&page=1`
-  )
-  return res.json()
-}
-
-const getTopRated = async () => {
-  const res = await fetch(
-    `${process.env.BASE_URL}/movie/top_rated?api_key=${process.env.API_KEY}&page=1`
-  )
-  return res.json()
-}
-
-const getPopular = async () => {
-  const res = await fetch(
-    `${process.env.BASE_URL}/movie/popular?api_key=${process.env.API_KEY}&page=1`
-  )
-  return res.json()
 }
 
 const Home = async (props: Props) => {
@@ -48,14 +21,11 @@ const Home = async (props: Props) => {
   // const { results: popularMovies } = await getPopular()
 
   // note: more performance than above
-  const genresPromise = getGenres()
-  const topRatedPromise = getTopRated()
-  const popularPromise = getPopular()
   const [
     { genres: categories },
     { results: topMovies },
     { results: popularMovies },
-  ] = await Promise.all([genresPromise, topRatedPromise, popularPromise])
+  ] = await Promise.all([getGenres(), getTopRated(), getPopular()])
   // note: more performance than above
 
   return (

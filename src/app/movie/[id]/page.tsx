@@ -1,6 +1,7 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import MovieComponent from '@/components/movie'
+import { getMovie } from '@/services'
 
 type Props = {
   params: {
@@ -9,13 +10,6 @@ type Props = {
   searchParams: {
     error: string
   }
-}
-
-const getMovie = async (movieID: number) => {
-  const res = await fetch(
-    `${process.env.BASE_URL}/movie/${movieID}?api_key=${process.env.API_KEY}`
-  )
-  return res.json()
 }
 
 const Movie = async (props: Props) => {
