@@ -4,8 +4,3 @@ export interface IMovie {
   title: string
   overview?: string
 }
-
-export interface ICategory {
-  id: number
-  name: string
-}

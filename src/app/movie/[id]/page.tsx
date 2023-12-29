@@ -1,6 +1,5 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
-import Movies from '@/mocks/movies.json'
 import MovieComponent from '@/components/movie'
 
 type Props = {
@@ -12,10 +11,15 @@ type Props = {
   }
 }
 
-const Movie = (props: Props) => {
-  const movieDetail = Movies.results.find(
-    (movie) => movie.id == props.params.id
+const getMovie = async (movieID: number) => {
+  const res = await fetch(
+    `${process.env.BASE_URL}/movie/${movieID}?api_key=${process.env.API_KEY}`
   )
+  return res.json()
+}
+
+const Movie = async (props: Props) => {
+  const movieDetail = await getMovie(props.params.id)
 
   if (!movieDetail) {
     notFound()

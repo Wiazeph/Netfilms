@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { ICategory } from '@/types'
 
 type Props = {
-  categories: ICategory[]
+  categories: {
+    id: any
+    name: string
+  }[]
 }
 
 const Categories = (props: Props) => {
