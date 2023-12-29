@@ -1,15 +1,17 @@
-import React from 'react'
-
 type Props = {
   path: string
-  query?: String
+  query?: string
 }
 
 const fetchService = async (props: Props) => {
-  const res = await fetch(
-    `${process.env.BASE_URL}${props.path}?api_key=${process.env.API_KEY}${props.query}`
-  )
-  return res.json()
+  try {
+    const res = await fetch(
+      `${process.env.BASE_URL}${props.path}?api_key=${process.env.API_KEY}${props.query}`
+    )
+    return res.json()
+  } catch (error) {
+    throw new Error('An error has occurred. Sorry for that!')
+  }
 }
 
 const getCategory = async (genreID: String) => {
@@ -43,6 +45,7 @@ const getPopular = async () => {
 const getMovie = async (movieID: number) => {
   return fetchService({
     path: `/movie/${movieID}`,
+    query: `&page=1`,
   })
 }
 

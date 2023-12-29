@@ -19,10 +19,6 @@ const Movie = async (props: Props) => {
     notFound()
   }
 
-  if (props.searchParams.error === 'true') {
-    throw new Error('An error has occurred. Sorry for that!')
-  }
-
   return <MovieComponent movieDetail={movieDetail} />
 }
 
