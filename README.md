@@ -1,3 +1,17 @@
+# Netfilms
+
+<br>
+
+This project is a clone of the example made in a Next.js tutorial series. Additionally, this project is a site where you can review movies by categories and access movie information.
+
+<br>
+
+## Technologies, Tools or Packages Used
+
+[Next.js](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/) + [The Movie Database API](https://developer.themoviedb.org/docs/getting-started) + [React Icons](https://react-icons.github.io/react-icons/)
+
+<br><br>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
